@@ -1,0 +1,26 @@
+Sat, June 13, 2020 @ 11pm (30 mins) on Facebook Messenger
+
+- talked about FFX computer vision idea
+	- YouTube video showing that part of the game:
+	- https://www.youtube.com/watch?v=BDEkOscjK2U
+
+- should we use an "engineering design framework"???
+	- https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-process-steps
+	- CPSC usually uses Agile??
+	- AJ send Lucas a copy of the "Agile Manifesto", from I4H
+	- Can use the related Excel spreadsheet to organize our tasks
+
+- we won't follow the Scrum process
+	- Doesn't seem viable for a two-person project
+	- There's no need to have daily meetings (weekly/bi-weekly seems good)
+
+
+TO-DO: (Deadline = Mon, June 15, 2020)
+
+AJ
+	- Initialize GitHub repository
+	- Learn about "Project Boards" on GitHub
+
+Lucas
+	- n/a
+	
