@@ -1,0 +1,64 @@
+++++++++++ Mon, June 15, 2020 @730pm (60 mins) on Zoom ++++++++++
+
+
+- invited Lucas to be a collaborator on this project
+
+- talked about some general/initial ideas
+	- Do we only need to view part of the screen?
+	- We shouldn't need the whole screen in the webcam frame
+	- Could try zooming the webcam very close to the screen
+	- Is framerate going to be an issue?
+
+- AJ can (easily?) make a robot to press the PS4 controller button
+	- Dependent on any kind of input
+		- mouse click
+		- keyboard input
+		- LED status
+		- push-button
+
+- Lucas can (easily?) get the TV screen pixels using computer vision
+	- There may be an issue with regards to how a TV screen emits light
+
+- one major difficulty will be to connect the hardware and software together
+
+- a possible solution to connect hardware and software:
+	- AJ can interface the Rpi4 with the Arduino "easily" (i.e. it's doable)
+	- We can run Python code on the Rpi4
+	- So, the computer vision from Rpi4 can interact directly with the Arduino!
+	- Will still need to figure out/test to make sure
+
+- another idea:
+	- Is there a way to extract the save file from the PS4??
+	- Then maybe we can upload to an emulator!
+	- If this works, will allow for easy testing of our program
+
+- BUT: Not everyone is playing on an emulator
+	- Will still have to try with actual camera hardware too
+
+
+++++++++++ EDP STEP 1 = Define the Problem ++++++++++
+
+
+- "Create a robot to solve the lightning sidequest"
+	- Much too specific
+	- Need to start with a more generic statement
+	- ex: If a kid comes to you with this problem, they aren't likely to phrase it like this!
+
+- after some discussion, we came up with the following:
+
+*PROBLEM STATEMENT*: "The FFX 'Dodge 200 lightning bolts' challenge is hard and stupid and I can't do it"
+
+
+++++++++++ TO-DO (Deadline = Thurs, June 18, 2020) ++++++++++
+
+
+AJ
+	
+Lucas
+
+Both
+	- Do background research into the problem
+		- Think more generally!
+		- Does a solution already exist?
+
+
