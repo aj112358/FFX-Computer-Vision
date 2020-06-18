@@ -1,4 +1,4 @@
-++++++++++ Background Research ++++++++++
+# ** Background Research ** #
 
 (Note: The format/guide for doing background research is taken from here: https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/background-research-plan)
 
