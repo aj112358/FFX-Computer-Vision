@@ -1,0 +1,170 @@
+++++++++++ Background Research ++++++++++
+
+(Note: The format/guide for doing background research is taken from here: https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/background-research-plan)
+
+Background research is especially important for engineering design projects, because you can learn from the experience of others and learn from their mistakes. Here is a plan for gathering your background research effectively:
+
+
+[x] Learn from the experiences of others — this can help you find out about existing solutions to similar problems, and avoid mistakes that were made in the past. So, for an engineering design project, do background research in two major areas:
+[x] Users or customers
+[x] Existing solutions
+
+
+
+++++++++++ Key Info ++++++++++
+
+These are the four guiding questions I used to conduct my background research. The actual research is written below in the 'Research Notes' section.
+
+
+(1) Identify questions to ask about your target user or customer.
+
+- I am the target user (I play the game myself!)
+- BUT: Assuming I didn't know anything about the game, I made a list of questions below that I would ask
+
+
+(2) Identify questions to ask about the products that already exist to solve the problem you defined or a problem that is very similar.
+
+- There are a few existing solutions I found to this problem
+
+
+(3) Plan to research how your product will work and how to make it.
+
+- Did some research into the theory behind computer/machine vision (CV)
+- Found some resources to learn application using Python
+
+
+(4) Network with other people with more experience than yourself: your mentors, parents, and teachers. Ask them: "What should I study to better understand my engineering project?" and "What area of science covers my project?" Better yet, ask even more specific questions.
+
+- n/a
+
+
+
+
+
+============================
+Research Notes
+============================
+
+Questions to ask about the user/problem:
+	- What is the game about? Overall theme? What consoles?
+	- Popularity? Old or new?
+	- How many times have you tried to complete the challenge?
+	- What are your thoughts as to how one might complete it, from your experiences?
+	- What makes the challenge difficult? Be specific!
+	- How could the challenge be made easier?
+	- What personal skills are required to complete the challenge?
+	- What in-game skills are required? (Items, etc)
+	- What happens when the challenge is completed?
+	- How many attempts do you have at the challenge?
+
+
+Things to think about (regarding gameplay):
+	- Need to use a delay after the "Jump" button is pressed? (No, only for PC)
+	- Can make a buzzer sound/LED light right when lightning strikes
+	- Is there a particular location that lightning strikes more frequently??
+	- Does the location of Tidus (name of main character) need to be kept at the same place???
+	- Does Tidus need to be (always) facing a certain direction?
+	- DONT FORGET: You cannot leave the screen, else counter will reset!!!!
+	- Include a counter in the program (GUI??)
+	- Players think there are locations that are "less random"
+	- Do we need to worry about monster encounters??
+		- Can equip a "No-Encounter" weapon/armor
+
+
+
+
+Someone already made something similar
+	- https://steamcommunity.com/sharedfiles/filedetails/?id=686011809
+	- BUT: It's meant to be used on the Steam version of FFX-HD (The PC version of the game)
+
+Here are some more:
+	- https://www.reddit.com/r/FinalFantasy/comments/4jbhkk/final_fantasy_x_pc_dodging_lightning_in_thunder/
+	- https://www.reddit.com/r/videos/comments/28qnx8/how_i_dodged_200_lightning_bolts_in_a_row_in/
+		- This person literally implemented the same Arduino idea we had!!!
+	- https://www.reddit.com/r/finalfantasyx/comments/57u6lv/ps3ps4_easy_lightning_strike_dodging_timing_is/
+		- This person claims that timing is NOT random
+
+There seem to be a few existing scripts that solve this problem
+	- All are for the PC version
+	- Most of them play a sound just as/before the lightning strikes!
+	- APPARENTLY: You can play the PS4 game *remotely*???
+
+
+
+
+
+
+
+Some resources to keep in mind for future projects:
+	- https://www.autohotkey.com
+
+
+Things I have in my Arduino kit:
+	- 2x Photoresistors
+		- From Wikipedia: "A photoresistor (acronymed LDR for Light Decreasing Resistance, or light-dependent resistor, or photo-conductive cell) is a passive component that decreases resistance with respect to receiving luminosity (light) on the component's sensitive surface. The resistance of a photoresistor decreases with increase in incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor"
+	- 1x Infrared Sender ("Sensor"?)
+
+
+
+
+=======================================
+Machine Vision Specific Research
+=======================================
+
+
+- https://www.qualitymag.com/articles/93742-the-importance-of-consistent-illumination-in-machine-vision
+	- important that measurements are accurate and repeatable
+	- MV revaluate the IMAGE of an object, NOT the object itself
+	- THUS: need to ensure that the camera can capture an image containing all of the details needed to make your measurements
+	- factors that influence the image:
+		- wavelength of light
+		- nature of the object's surface
+		- direction of light
+		- reflections given off of the object's surface
+		- shadows cast on the object
+	- hence, you must make sure to take your lighting configuration into account (i.e. select the correct external lighting technique)
+	- factors affecting consistency of illumination:
+		- age of the light (source?)
+		- temperature of the light
+		- power supply to the light
+		- ambient lighting
+		- variations in lighting and camera exposure
+	- ways to control illumination intensity:
+		- use temperature feedback
+		- use optical sensor feedback
+		- closed loop approach based on image illumination levels detected by the camera (most comprehensive)
+
+
+- here are some resources on how to code CV with Python:
+	- https://www.youtube.com/watch?v=Z78zbnLlPUA&list=PLQVvvaa0QuDdttJXlLtAJxJetJcqmqlQq&index=1
+
+
+=====================
+RANDOM STUFF
+=====================
+
+
+
+OTHER QUESTIONS TO LOOK INTO:
+- does the screen brightness/contrast matter??
+- does the time of day matter? (sunlight vs moonlight)
+- does artifical lighting matter?
+- do we have to consider shadows on the screen?
+- does it depend on the type/brand/resolution/size of tv??
+
+
+The purpose of your research paper is to give you the information to understand why your experiment turns out the way it does. The research paper should include:
+
+(A) The history of similar experiments or inventions
+(B) Definitions of all important words and concepts that describe your experiment
+(C) Answers to all your background research plan questions
+(D) Mathematical formulas, if any, that you will need to describe the results of your experiment
+
+
+
+
+
+
+
+
+
