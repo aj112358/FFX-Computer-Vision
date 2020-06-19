@@ -1,19 +1,18 @@
-# ** Background Research ** #
+++++++++++ Background Research ++++++++++
 
 (Note: The format/guide for doing background research is taken from here: https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/background-research-plan)
 
 Background research is especially important for engineering design projects, because you can learn from the experience of others and learn from their mistakes. Here is a plan for gathering your background research effectively:
 
-
-[x] Learn from the experiences of others — this can help you find out about existing solutions to similar problems, and avoid mistakes that were made in the past. So, for an engineering design project, do background research in two major areas:
-[x] Users or customers
-[x] Existing solutions
-
+[x] Ask questions to develop further understanding of the problem
+[x] Learn from the experiences of others
+[x] Find existing solutions
 
 
 ++++++++++ Key Info ++++++++++
 
-These are the four guiding questions I used to conduct my background research. The actual research is written below in the 'Research Notes' section.
+These are the four guiding questions I used to conduct my background research.
+The actual research is written below in the 'Research Notes' section.
 
 
 (1) Identify questions to ask about your target user or customer.
@@ -38,11 +37,8 @@ These are the four guiding questions I used to conduct my background research. T
 - n/a
 
 
-
-
-
 ============================
-Research Notes
+====== Research Notes ======
 ============================
 
 Questions to ask about the user/problem:
@@ -71,11 +67,10 @@ Things to think about (regarding gameplay):
 		- Can equip a "No-Encounter" weapon/armor
 
 
-
-
 Someone already made something similar
 	- https://steamcommunity.com/sharedfiles/filedetails/?id=686011809
 	- BUT: It's meant to be used on the Steam version of FFX-HD (The PC version of the game)
+
 
 Here are some more:
 	- https://www.reddit.com/r/FinalFantasy/comments/4jbhkk/final_fantasy_x_pc_dodging_lightning_in_thunder/
@@ -84,15 +79,11 @@ Here are some more:
 	- https://www.reddit.com/r/finalfantasyx/comments/57u6lv/ps3ps4_easy_lightning_strike_dodging_timing_is/
 		- This person claims that timing is NOT random
 
+
 There seem to be a few existing scripts that solve this problem
 	- All are for the PC version
 	- Most of them play a sound just as/before the lightning strikes!
 	- APPARENTLY: You can play the PS4 game *remotely*???
-
-
-
-
-
 
 
 Some resources to keep in mind for future projects:
@@ -105,12 +96,9 @@ Things I have in my Arduino kit:
 	- 1x Infrared Sender ("Sensor"?)
 
 
-
-
-=======================================
-Machine Vision Specific Research
-=======================================
-
+==============================================
+====== Machine Vision Specific Research ======
+==============================================
 
 - https://www.qualitymag.com/articles/93742-the-importance-of-consistent-illumination-in-machine-vision
 	- important that measurements are accurate and repeatable
@@ -122,7 +110,8 @@ Machine Vision Specific Research
 		- direction of light
 		- reflections given off of the object's surface
 		- shadows cast on the object
-	- hence, you must make sure to take your lighting configuration into account (i.e. select the correct external lighting technique)
+	- hence, you must make sure to take your lighting configuration into account
+		- i.e. select the correct external lighting technique
 	- factors affecting consistency of illumination:
 		- age of the light (source?)
 		- temperature of the light
@@ -139,11 +128,13 @@ Machine Vision Specific Research
 	- https://www.youtube.com/watch?v=Z78zbnLlPUA&list=PLQVvvaa0QuDdttJXlLtAJxJetJcqmqlQq&index=1
 
 
-=====================
-RANDOM STUFF
-=====================
+- here are some resources to learn more about machine vision in general:
+	- https://www.advancedillumination.com/wp-content/uploads/2018/10/A-Practical-Guide-to-Machine-Vision-Lighting-v.-4-Generic.pdf
 
 
+==========================
+====== RANDOM STUFF ======
+==========================
 
 OTHER QUESTIONS TO LOOK INTO:
 - does the screen brightness/contrast matter??
@@ -152,19 +143,12 @@ OTHER QUESTIONS TO LOOK INTO:
 - do we have to consider shadows on the screen?
 - does it depend on the type/brand/resolution/size of tv??
 
-
+<unrelated>
 The purpose of your research paper is to give you the information to understand why your experiment turns out the way it does. The research paper should include:
 
 (A) The history of similar experiments or inventions
 (B) Definitions of all important words and concepts that describe your experiment
 (C) Answers to all your background research plan questions
 (D) Mathematical formulas, if any, that you will need to describe the results of your experiment
-
-
-
-
-
-
-
 
 
