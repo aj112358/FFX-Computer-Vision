@@ -1,0 +1,160 @@
+++++++++++ Thursday, June 18, 2020 @8:20pm (60 mins) on Zoom ++++++++++
+
+- Lucas gave his findings on his background research
+	- read mostly about openCV
+	- couldn't find anything really specific to this problem
+	- there may be more lag on the PS4 version of the game
+		- because of HDMI cable and/or wireless controller
+		- hence, could be more lag than on PS2 version!
+
+
+- AJ gave his findings on his background research
+	- found some exact solutions to this problem using photoresistors
+	- briefly discussed the idea of playing PS4 games remotely
+		- apparantly you can sign into your PS account
+		- then access the games on your computer
+		- could be a viable solution to solve the problem
+	- general amount of time taken is 20 mins!!!
+		- and this is for a computer driven solution!
+
+
+- regarding AJ's "questions to ask the user", some questions might be less important:
+	- ex) Popularity, theme of game
+	- doesn't help to solve the actual problem
+
+
+- some things to think about regarding the lighting (for computer vision):
+	- lighting of different user's living rooms is not the same!!!
+	- SOLUTION(?) = just keep webcam really close to the screen
+	- maybe we only have to be concerned about natural sunlight???
+		- may cause shadows/glare on the screen
+
+
+- talked about operation and properties of a photoresistor
+	- What does a photoresistor output??
+		- range of 0-700 Hz (not quite light intensity?)
+		- It allows for a variable resistance
+	- see "documentation" on GitHub for quick details
+	- there is also a datasheet for reference
+
+
+- discussed AJ's list of "things to talk about"
+	- lightning will strike you regardless if you're stationary or moving
+	- IMPORTANT: Need to make sure the character does not go out of the screen
+		- maybe we can control the character WHILE the program is running?
+		- the user can ensure they stay on the same screen
+		- OR: could position character in a corner?
+	- what about monster encounters?
+		- no monster encounters if ONLY you jump
+		- could encounter if you are moving
+
+
+- some good ideas to do for our own implementation:
+	- jumps counter
+	- buzzer would be fun
+	- maybe not GUI; instead use terminal output
+
+
+- discussed whether program should run until exactly, or at least, 200 jumps
+	- Why would it matter if program shuts off at exactly 200?
+	- Don't need to shut off at exactly 200...Who cares?
+	- AJ: Is webcam privacy an issue?
+
+
+
+++++++++++ EDP STEP 3 = SPECIFY REQUIREMENTS ++++++++++
+
+MARKET = just us, and a small niche of players
+	- would only want to share our solution in a forum
+	- problem is too small to think broadly
+	- hence, we probably don't need to think about:
+		- cost
+		- marketability
+		- etc...
+
+
+ABSOLUTE BASIC REQUIREMENTS:
+1. Make character jump away from lightning strike at right time
+2. Keep character on the same screen
+3. Program should continue to run until at least 200 jumps
+4. Solution has to work on the PS4 console version of the game
+
+
+- [ASIDE] Don't lost focus:
+	- We are still just talking about the *problem*
+	- We are not yet at the stage where we should talk about the solution
+		- Hence, we don't need to worry about the exact components, etc...
+
+
+++++++++++ EDP STEP 4 = BRAINSTORM SOLUTIONS ++++++++++
+
+Here is a list of possible solutions we brainstormed:
+
+(1) Use a photoresistor cell, with Arduinio microcontroller
+
+(2) Use webcam and openCV, with Aruduino microcontroller
+
+(3) "Hack" into PS4 controller circuitry, and tell it "X button has been pressed"
+	- May not need to use Arduino then
+
+(4) Load the game remotely onto a PC, and use openCV on your PC to finish the challenege
+	- Doesn't require any circuitry
+	- May have too much latency?
+		- Especially if you need to do it 20mins straight!
+
+(5) Extract the save file, load onto PC, "hack" the save file to have it finish the challenge
+	- We would be using a pre-existing, community made program to do it
+		- These exist for FF7; may also exist for FF10?
+	- Not actually hack into the game code
+
+
+++++++++++ EDP STEP 5 = CHOOSE THE BEST SOLUTIONS ++++++++++
+
+The solution we have deemed to be the most efficient and applicable:
+
+(2) Use webcam and openCV, with Aruduino microcontroller
+	- Satisfies all base requirements
+	- Is doable with our repertoire of knowledge
+
+
+++++++++++ EDP STEP 6 = DEVELOP THE SOLUTION ++++++++++
+
+Here is a plan-of-execution for our team. Each "cycle" is the amount of time between team meetings:
+
+CYCLE 1:
+	AJ = Refresh knowledge on Arduino, and related stuff
+
+	Lucas = Learn more about openCV, figure out how to get pixels, and how to use in relation to a webcam
+
+
+CYCLE 2
+	Both =  Start writing code
+
+
+SOFT DEADLINE = Tues, June 30 
+
+
+++++++++++ TO-DO (Deadline = Tues, June 23, 2020) ++++++++++
+
+AJ
+	- Refresh knowledge on how to use an Arduino
+		- Configure general circuitry
+		- Learn how to program a servo motor
+		- Write C++ code to program Arduino
+		- [ASIDE]: Learn about photoresistors
+
+Lucas
+	- Learn more about openCV
+		- Methods to capture pixels
+		- How to use pixel data
+		- How to use openCV with a webcam
+
+Both
+
+
+
+
+
+
+
+
