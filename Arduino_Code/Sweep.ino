@@ -1,129 +1,86 @@
 /*
    Author: AJ Singh
-   Date: Mon, June 22, 2020
+   Date: Tues, June 23, 2020
    IDE V1.6.9
-   Function: To move a servo motor for FFX challenge.
+   Function: Better code (?) to move a servo motor for FFX challenge.
 */
 
 #include <Servo.h>
 Servo my_servo; // Initializing servo object
-int pos = 0;
+
+int start_pos = 0;
 int servo_pin = 3;
-int delay_time1 = 10;
-int delay_time2 = 10;
-//int pos;
-int incoming_data = 0;
 
+char incoming_byte = 0;
+String number_string = "";
+boolean not_a_number = false;
 
-const byte numChars = 32;
-char receivedChars[numChars];   // an array to store the received data
-
-boolean newData = false; // Tracks if data is inputted still exists in serial monitor
-
-int dataNumber = 0; 
-
+int rotation_angle;
 
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("<Arduino Uni is ready!>");
-  Serial.println("Please enter an angle between [0,180] degrees...");
+  
+  Serial.println("<Arduino Uno is ready!>");
+  Serial.println("Please enter an integer between 0 and 180:");
 
   my_servo.attach(servo_pin);
+  my_servo.write(start_pos); // Reset servo to starting angle
 }
+
 
 void loop() {
-
-  //    if (Serial.available() == 0) {
-    //    }
-
-
-  while (Serial.available() == 0) {
-    // just waiting
-  }
-
-  recvWithEndMarker();
-  showNewNumber();
-}
-
-
-
-
-void recvWithEndMarker() {
-  static byte index = 0;
-  char endMarker = '\n'; // Select "newline" as line-ending in serial monitor
-  char received;
-
-
-
   if (Serial.available() > 0) {
-    received = Serial.read();
+    incoming_byte = Serial.read();
 
-    if (received != endMarker) {
-      receivedChars[index] = received;
-      index++;
-
-      if (index >= numChars) {
-        index = numChars - 1;
-      }
+    // If current byte is a number, keep it
+    // Checking the input's ASCII values
+    if ( incoming_byte >= '0' && incoming_byte <= '9' ) {
+      number_string += incoming_byte;
     }
+
+    // If it's a newline, then no more inputs
+    // Check if input is good
+    else if (incoming_byte == '\n') {
+            rotation_angle = number_string.toInt();   
+                                 
+            // Check: Input is a number?
+            if (not_a_number) {
+              Serial.println("Not a number!");
+            }
+                        
+            // Check: Something even entered?
+            else if (number_string == "") {
+              Serial.println("No input detected!");
+            }
+
+            // Check: Input is within [0,180]?
+
+            else if (rotation_angle < 0 || rotation_angle > 180) {
+              Serial.println("Integer must be between 0 and 180");
+            }
+
+            // Send results to servo motor
+            else {              
+              Serial.print("Rotating servo motor to ");
+              Serial.print(rotation_angle);
+              Serial.println(" degrees...");
+              Serial.println();
+              
+              my_servo.write(rotation_angle);
+              
+              Serial.println("Please enter an integer between 0 and 180:");
+            }
+            
+            not_a_number = false;   // reset flag
+            number_string = "";     // clear the string for reuse
+    } // end of: else if (incoming_byte == '\n')
+
+    
+    // Flag a non-number    
     else {
-      receivedChars[index] = '\0'; // terminate the string
-      index = 0;
-      newData = true;
+      not_a_number = true;
     }
-  }
-}
-
-void showNewNumber() {
-      dataNumber = 0;
-  
-  if (newData == true) {
-
-    dataNumber = atoi(receivedChars);   // Convert ASCII number to integer
     
-    Serial.print("Turning the servo motor to ");
-    Serial.print(dataNumber);
-    Serial.println(" degrees...");
-    Serial.println();
-    
-    newData = false;
-    Serial.println("Please enter an integer between 0 and 180: ");
-
-
-  }
+  } // end of: if (Serial.available() > 0)
 }
-
-
-
-
-
-
-////////////////////////
-
-// OLD CODE
-
-//
-//while (Serial.available() == 0) {
-//  // Waiting for user input
-//}
-//
-//  incoming_data = Serial.read;
-//
-//
-//
-////  for (pos = 0; pos <= 180; pos+=1) {
-//////    Serial.println(pos);
-////
-//////    pos = my_servo.read();
-//////    Serial.println(pos);
-////    my_servo.write(pos);
-//////    delayMicroseconds(delay_time1);
-////    delay(delay_time2);
-////  }
-////
-//////  for (pos = 180; pos >= 0; pos-=1) {
-//////    my_servo.write(pos);
-////////    delayMicroseconds(delay_time1);
-//////    delay(delay_time2);
-//////  }
