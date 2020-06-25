@@ -6,7 +6,7 @@
 	- Currently working with images to get pixel data, and produce some output
 		- Trying to create a histogram to find out average brightness of static images
 	- Generally following the tutorial/guidance from this page:
-		https://stackoverflow.com/questions/14243472/estimate-brightness-of-an-image-			opencv?fbclid=IwAR2-pbOVwbMyzls8vjW8HW-aJiRaIV3foRRKH2WH4nb56XR6qQuY-_AQf38
+		https://stackoverflow.com/questions/14243472/estimate-brightness-of-an-image-opencv?fbclid=IwAR2-pbOVwbMyzls8vjW8HW-aJiRaIV3foRRKH2WH4nb56XR6qQuY-_AQf38
 
 
 - AJ Updates:
