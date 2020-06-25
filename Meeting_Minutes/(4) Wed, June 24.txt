@@ -1,0 +1,101 @@
+++++++++++ Wednesday, June 24, 2020 @7:00pm (60 mins) on Zoom ++++++++++
+
+
+- Lucas Updates:
+	- Installing openCV takes an extremely long time!
+	- Currently working with images to get pixel data, and produce some output
+		- Trying to create a histogram to find out average brightness of static images
+	- Generally following the tutorial/guidance from this page:
+		https://stackoverflow.com/questions/14243472/estimate-brightness-of-an-image-			opencv?fbclid=IwAR2-pbOVwbMyzls8vjW8HW-aJiRaIV3foRRKH2WH4nb56XR6qQuY-_AQf38
+
+
+- AJ Updates:
+	- Successfully got the servo motor to work
+	- Wrote code to get an input integer, and the servo will rotate to that angle
+	- Generally difficult to get inputs on Arduino
+		- Because it reads input as a *stream of bytes*
+		- So, programmer has to reconstruct the input to desired data type
+	- Servo motor needs to be programmed to have delay time to reset to original position
+		- Otherwise, it rapidly oscillates between some intermediate angle range
+		- Because it doesn't have enough time to go back to start
+
+
+- Some potential new issues:
+	- Concerns with lag between Arduino & Rpi4?
+ 		- Will have to keep OVERALL processing time in mind
+		- TV occurence -> read by webcam -> processed with openCV code
+			-> data transfered to Arduino -> servo motor response
+	- Tidus seems to always jump toward bottom left corner of screen
+		- Shouldn't be an issue if we find a corner to situate in
+		- Not a big issue at this stage anyways
+	- May need to have character to avoid lighting rods???
+		- Unsure about this game mechanic for now
+	- Concerns regarding the framerate of PS4
+		- Shouldn't matter too much?
+		- Webcam framerate is more important
+
+
+- AJ will have to install openCV on Rpi4 
+	- Start early, as it may be finicky/take a long time!
+	- Make sure you have a strong internet connection!
+
+
+- FUN IDEA: Can we actually shock the user?!
+	- User experiences a mild electric shock if/when a thunder bolt strikes/hits Tidus
+	- BETTER IDEA: Use electric shock to cause muscle contraction on user
+		- Hence, they will press the PS4 controller button automatically!
+		- Avoids the use of Arduino hardware!
+
+
+- What are the game mechanics behind the screen flash?
+	- Gradient? (black -> gray -> white)
+	- Immediately show white screen?
+	- Need this information to determine how to select the correct RBG value
+		- Can also just figure out the RGB value by trial-and-error
+
+
+- What will be the output of openCV code?
+	- Lucas is thinking boolean value
+		- Would be easy to interpret for the Arduino
+
+
+- Need to make sure that Arduino code doesn't continually press the button multiple times!
+	- Need to have a delay before it receives another signal from rpi4
+
+
+- Lucas will give update by Friday evening
+	- We are thinking of meeting in-person on Sunday, June 28 (tentative) 
+
+
+
+++++++++++ TO-DO (Deadline = Fri, June 26, 2020 @7pm) ++++++++++
+
+AJ
+	- Install openCV library onto Rpi4
+		- May take a while so start early!
+		- And have a strong internet connection!
+	- Configure IoT connection between Arduino and Rpi4
+	- Learn basics of openCv
+		- Make basic openCV code to learn how the library works
+
+Lucas
+	- Continue learning more about openCV
+		- Try to get it working with webcam
+		- Upload inital/rough code sketch onto GitHub
+
+Both
+	- Think of ways your personal code would affect/interact with teammate's code
+		- What data types would the output/inputs need to be?
+		- Need continuous or discrete streams of data?
+		- etc...
+
+
+
+
+
+
+
+
+
+
+
