@@ -1,0 +1,43 @@
+++++++++++ Friday, June 26, 2020 @8:00pm (30 mins) on Zoom ++++++++++
+
+
+Lucas shared his updates:
+	- Showed and explained current version of OpenCV Python code
+		- Takes color video as input
+		- Turns it to grayscael
+		- Currently prints average of grayscale intensity values
+			- Averages over entire webcam field-of-vies
+
+
+AJ shared his updates:
+	- Currently having trouble making I2C connection
+	- Needs to confirm the webcam can be connected to Rpi4
+
+
+Potential issues:
+	- May need to modify Python program a bit to work with the Arduino
+		- i.e. Modify OpenCV outputs to be more easily read by Arduino
+	- Will need to test if webcam/OpenCV correctly identifies RGB values from TV screen
+
+
+***** NEXT MEETING *****
+ -> Sat, June 27 @6pm (tentative)
+ -> Will integrate hardware with software for our first test!
+
+
+
+++++++++++ TO-DO (Deadline = Sat, June 27, 2020 @6pm) ++++++++++
+
+
+AJ
+	- Fix I2C connection between Rpi4 & Arduino
+		- Test with basic Python program
+	- Install webcam packages/software/drivers onto Rpi4
+
+
+Lucas
+	- Clean up current OpenCV Python code
+		- Upload onto GitHub
+
+
+Both
