@@ -4,10 +4,16 @@ from matplotlib import pyplot as plt
 
 BRIGHT_LIMIT = 180 # Controls how how sensative the code is to brightness
 
-cap = cv.VideoCapture(0)
+count = 0 #
+is_flashing = False #
+
+
+cap = cv.VideoCapture(2)
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
+
+cap.set(3,640) #
 
 while True:
     ret, frame = cap.read()
@@ -22,8 +28,14 @@ while True:
 
 
     if (val[0] > BRIGHT_LIMIT): # Greater than the brightness limit
-        print(val)   ### Change this line to activate the Arduino code
+        is_flashing = True
+        #print(val)   ### Change this line to activate the Arduino code
 
+    if is_flashing and val[0] <= BRIGHT_LIMIT:
+        is_flashing = False
+        count+= 1
+        print("Number of lightning strikes: %d" %count)
+            
     if cv.waitKey(1) == ord('q'):
         break
 
