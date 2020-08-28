@@ -36,7 +36,7 @@ Here are the main findings from the data analysis:
 
 * Raspberry Pi 4
 * Arduino Uno
-* Logitech WebCam
+* Logitech C922 Webcam
 
 ## Data Collection Methodology
 
