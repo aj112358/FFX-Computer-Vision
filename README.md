@@ -1,13 +1,12 @@
 # FFX-Computer-Vision
 A project that uses computer vision to complete the "Dodge 200 Lightning Strikes" side-quest in FFX. The collected data was investigated through a data analysis to gain some insight into the game mechanics.
 
-_"Listen to my story...this may be our last chance"_
-        
-_- Tidus_
+> _"Listen to my story...this may be our last chance"_
+> _- Tidus_
 
 ## Problem Description
 
-Final Fantasy X (FFX) is a game first released for the Playstation 2 console in 2001, then later released onto a wider variety of consoles between 2013 - 2019.
+Final Fantasy X (FFX) is a game first released for the Playstation 2 console in 2001, then later released onto a wider variety of consoles between 2013 - 2019. It is a standard RPG-style game with side-quests deviating from the main storyline. One of these side quests happens to be the (now infamous) "Dodge 200 Lightning Strikes" which is essentially impossible to complete without extreme determination and focus. This is a project that avoids that needed extreme determination and focus, and provides a solution through implementation of various hardware and software.
 
 ## Project Goals
 
@@ -18,11 +17,7 @@ There were two main goals for this project:
 
 The first goal was completed successfully through our electronics setup. The setup consisted of a webcam that was connected to a Raspberry Pi 4 (Rpi4) that was picking up the video input from the game. The Rpi4 had an IoT connection with an Arduino Uno that would press the Playstation 4 controllor button
 
-
-
-
-The second goal was completed through a data analysis. I did the data analysis using a Jupyter Notebook as the main IDE. I started by importing the raw data and performing some data cleaning procedures. I then created some new features and went into the exploratory data analysis phase.
-
+The second goal was completed through a data analysis. The IDE of choice for the data analysis was a Jupyter Notebook. After importing the raw data and performing data cleaning procedures, I created new features and then spent the majority of time within the exploratory data analysis phase.
 
 ## Project Summary (Data Analysis)
 
@@ -34,14 +29,14 @@ Here are the main findings from the data analysis:
 3. The two time intervals between lightning strikes alternate.
 
 
-## Python Libraries Used
+## Hardware and Software Used Used
 
 * Python Version: 3.7
+* Python Libraries: numpy, pandas, matplotlib, seaborn, plotly (via chart_studio), cufflinks, datetime, scipy, open-cv
 
-* Libraries: numpy, pandas, matplotlib, seaborn, plotly (via chart_studio), cufflinks, datetime, scipy
-
-* Libraries for data collection: open-cv
-
+* Raspberry Pi 4
+* Arduino Uno
+* Logitech WebCam
 
 ## Data Collection Methodology
 
@@ -65,6 +60,13 @@ The main thing I was interested in was the timing of the lightning strikes.
 
 Here is what I discovered...
 
+## Future Steps
+
+Here are some avenues to continue expanding on this, or other FFX-related, projects in the future:
+* Finish analysis of the grayscale data
+* Create solutions for other side quests (dodging birds, anyone?)
+* Look into other FF series games and apply your electronics and data science skills!
+
 ## Authors
 
 * **AJ Singh** (https://github.com/aj112358)
@@ -77,5 +79,21 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * OpenCV creators and contributors for such a useful library
-* Creators of the Final Fantasy videogame franchise: Yoshinori Kitase, Motomu Toriyama, Takayoshi Nakazato, Toshiro Tsuchida, Koji Sugimoto, Takashi Katano, Tetsuya Nomura, Yusuke Naora, Shintaro Takai, Kazushige Nojima, Daisuke Watanabe, Motomu Toriyama, Nobuo Uematsu, Masashi Hamauzu, Junya Nakano, and all others who helped to develop the games
+* Creators of the Final Fantasy videogame franchise including:
+   - Yoshinori Kitase
+   - Motomu Toriyama
+   - Takayoshi Nakazato
+   - Toshiro Tsuchida
+   - Koji Sugimoto
+   - Takashi Katano
+   - Tetsuya Nomura
+   - Yusuke Naora
+   - Shintaro Takai
+   - Kazushige Nojima
+   - Daisuke Watanabe
+   - Motomu Toriyama
+   - Nobuo Uematsu
+   - Masashi Hamauzu
+   - Junya Nakano
+   - ...and the many others who helped to develop the games!
 * Viewers of my GitHub page. Thank you for visiting!
