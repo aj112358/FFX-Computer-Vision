@@ -1,85 +1,50 @@
 # FFX-Computer-Vision
-A project that uses computer vision to complete the "Dodge 200 Lightning Strikes" side-quest in FFX!
+A project that uses computer vision to complete the "Dodge 200 Lightning Strikes" side-quest in FFX, and uses the collected data to perform a data analysis to gain some insight into the game mechanics.
+
+_"Listen to my story...this may be our last chance"_
+_- Tidus_
 
 
+## Project Summary
 
-# Project Title
+GOAL:
 
-One Paragraph of project description goes here
+* Hello
+* World
 
-## Getting Started
+### Python Libraries Used
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Python Version: 3.7
+Libraries: numpy, pandas, matplotlib, seaborn, plotly (as chart_studio), cufflinks, datetime, scipy
 
-### Prerequisites
+Libraries for data collection: open-cv
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
+## Data Collection
 
-### Installing
+I collected data using a webcam setup with Raspberry Pi 4 & Arduino Uno, using the OpenCV Python library.
 
-A step by step series of examples that tell you how to get a development env running
+### Data Cleaning
 
-Say what the step will be
+I had to clean the data a lot. Here are some specifics:
 
-```
-Give the example
-```
+* boom
+* shaka
+* laka
 
-And repeat
+### Feature Engineering
 
-```
-until finished
-```
+The main thing I was interested in was the timing of the lightning strikes.
 
-End with an example of getting some data out of the system or using it for a little demo
+## Exploratory Data Analysis
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Here is what I discovered...
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **AJ Singh** (https://github.com/aj112358)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Lucas Ramos-Strankman (https://github.com/LucasRStrankman)
 
 ## License
 
@@ -87,6 +52,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* OpenCV creators and contributors for such a useful library
+* Creators of the Final Fantasy videogame franchise: Yoshinori Kitase, Motomu Toriyama, Takayoshi Nakazato, Toshiro Tsuchida, Koji Sugimoto, Takashi Katano, Tetsuya Nomura, Yusuke Naora, Shintaro Takai, Kazushige Nojima, Daisuke Watanabe, Motomu Toriyama, Nobuo Uematsu, Masashi Hamauzu, Junya Nakano, and all others who helped to develop the games
+* Viewers of my GitHub page. Thank you for visiting!
