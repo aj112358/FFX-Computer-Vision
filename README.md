@@ -85,13 +85,30 @@ We then used histograms to visualize the distribution of the time difference fea
 
 Once again, we see the bi-modal behaviour but more interestingly, we now see that the time difference values seem to be equally distributed between the two modes. This suggests that the time difference between lightning strikes must be alternating between the two modes! We choose to investigate this idea later, and continue to look into the individual clusters themselves.
 
-Continuing our analysis, we split the above histograms into their two modes:
+Continuing our analysis, we split the above histograms into their two modes as seen in the figure below:
 
 ![alt text][histogram2]
 
+These four histograms are pretty close to a normal distribution. We can be certain that with a much larger data set this would indeed be the case. Here is a table that summarizes the mean and standard deviation of each histogram:
 
+|  || First Dataset || Second Dataset |
+--- | --- | --- | --- | ---
+|| Mean | Stdev | Mean | Std |
+| Small | 6.008 | 0.0317 | 6.011 | 0.0326 |
+| Large | 11.180 | 0.0460 | 11.172 | 0.0466 |
 
+For each pair of mean and standard deviation values, we can compute the coefficients of variance to assess the meaning of the standard deviation in each case:
 
+| CoV | First Dataset | Second Dataset |
+--- | --- | ---
+| Small | 0.005270467664901825 | 0.005429330852085901 |
+| Large | 0.004110880245098547 | 0.004175331250567151 | 
+
+Since the coefficient of variance is very small in all four cases, we conclude that the time difference values are very tightly clustered around their respective means.
+
+Finally, we investigate the suspected alternating pattern. Recall from the first histogram above, we hypothesized that the lightning strikes occur in an alternating fashion, first with ~6s between them, then ~11.25s. Indeed, we created a function to determine if this were true and the answer is a resounding 'yes'! 
+
+In conclusion, our analysis revealed very unexpected results! We had originally believed (or rather, **perceived** during gameplay) that the times between lightning strikes was random. In fact, it turns out that it is not random at all, and alternates between 6s and 11.25s.
 
 ## Future Steps
 
