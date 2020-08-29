@@ -108,6 +108,8 @@ Since the coefficient of variance is very small in all four cases, we conclude t
 
 Finally, we investigate the suspected alternating pattern. Recall from the first histogram above, we hypothesized that the lightning strikes occur in an alternating fashion, first with ~6s between them, then ~11.25s. Indeed, we created a function to determine if this were true and the answer is a resounding 'yes'! 
 
+## Conclusion
+
 In conclusion, our analysis revealed very unexpected results! We had originally believed (or rather, **perceived** during gameplay) that the times between lightning strikes was random. In fact, it turns out that it is not random at all, and alternates between 6s and 11.25s.
 
 ## Future Steps
