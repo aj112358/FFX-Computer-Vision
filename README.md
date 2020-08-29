@@ -19,7 +19,7 @@ There were two main goals for this project:
 
 The first goal was completed successfully through our electronics setup. The setup consisted of a webcam connected to a Raspberry Pi 4 (Rpi4) that was picking up the video input from the game. The Rpi4 had an IoT connection with an Arduino Uno microcontroller that would press the required Playstation 4 controllor button at the right time.
 
-The second goal was completed through a [data analysis](/Lightning%20Data.ipynb). The IDE of choice for the analysis was a Jupyter Notebook. After importing the raw data and performing data cleaning procedures, new features were created and the subsequent majority of time was spent within the exploratory data analysis phase.
+The second goal was completed through a [data analysis](/Lightning_Data_Analysis.ipynb). The IDE of choice for the analysis was a Jupyter Notebook. After importing the raw data and performing data cleaning procedures, new features were created and the subsequent majority of time was spent within the exploratory data analysis phase.
 
 ## Data Analysis Summary
 
@@ -29,7 +29,7 @@ The main goal of the data analysis was to gather insight into the timing of the 
 2. The time interval between lightning strikes is either ~6s or ~11s.
 3. The two time intervals between lightning strikes alternate.
 
-Here is a link to the Jupyter Notebook: [FFX Data Analysis](/Lightning%20Data.ipynb)
+Here is a link to the Jupyter Notebook: [FFX Data Analysis](/Lightning_Data_Analysis.ipynb)
 
 ## Hardware and Software Used Used
 
@@ -114,7 +114,7 @@ For each pair of mean and standard deviation values, we can compute the coeffici
 
 Since the coefficient of variance is very small in all four cases, we conclude that the time difference values are very tightly clustered around their respective means.
 
-Finally, we investigated the suspected alternating pattern. Recall from the first histogram above, we hypothesized that the lightning strikes occur in an alternating fashion, first with ~6s between them, then ~11.25s. Indeed, we created a function to determine if this were true and the answer is a resounding 'yes'! *(See [detailed data analysis](/Lightning%20Data.ipynb) for more information)*
+Finally, we investigated the suspected alternating pattern. Recall from the first histogram above, we hypothesized that the lightning strikes occur in an alternating fashion, first with ~6s between them, then ~11.25s. Indeed, we created a function to determine if this were true and the answer is a resounding 'yes'! *(See [detailed data analysis](/Lightning_Data_Analysis.ipynb) for more information)*
 
 ## Conclusion
 
