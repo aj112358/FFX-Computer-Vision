@@ -46,19 +46,52 @@ The Rpi4 was connected in a circuit with an Arduino Uno microcontroller which we
 
 ## Data Cleaning
 
-I had to clean the data a lot. Here are some specifics:
+Here is a summary of the data cleaning procedures that were done:
 
-* boom
-* shaka
-* laka
+* Removed extraneous spaces in data set
+* Convert the 'timings' column to DateTime object types
+* Removed bad data points from raw data
+  - Occurance was due to startup and shutdown of data collecting setup
 
 ## Feature Engineering
 
-The main thing I was interested in was the timing of the lightning strikes.
+The main thing we are interested in is the timing of the lightning strikes. More specifically, we wish to investigate the amount of time between consecutive lightning strikes.
+
+As such, the main feature we created was a 'time difference' feature. This was done simply by subtracting two consecutive datetime values throughout our cleaned data set. We also extracted the number of seconds between lightning strikes as a simple float value.
 
 ## Exploratory Data Analysis
 
-Here is what I discovered...
+The first thing to investigate was the very obvious dual modality of the time difference feature. A basic rugplot helps us to visualize this dual moadality:
+
+![alt text][rugplot1]
+
+As we can see, the left image shows the time difference data clustered around 6 & 11.25 seconds. In the right image, we clearly see five values that do not lie in these clusters. We considered these five values to be outliers and removed them from our data set, as seen in the rugplot below:
+
+![alt text][rugplot2]
+
+The logical next step, was to investigate the two clusters individually. A few scatter plots show this clustering affect more readily:
+
+![alt text][scatter1a] ![alt text][scatter1b]
+
+We split each scatter plot into their low and high modes:
+
+![alt text][scatter2]
+
+In the split scatter plots above, we see that there is minimal dispersion of the time difference values about their mean. In both data sets (first in red; second in blue), we see the range of the data values to be approximately 0.2 seconds and 0.25 seconds for the low and high modes, respectively.
+
+We then used histograms to visualize the distribution of the time difference feature. One histogram is shown below:
+
+![alt text][histogram1]
+
+Once again, we see the bi-modal behaviour but more interestingly, we now see that the time difference values seem to be equally distributed between the two modes. This suggests that the time difference between lightning strikes must be alternating between the two modes! We choose to investigate this idea later, and continue to look into the individual clusters themselves.
+
+Continuing our analysis, we split the above histograms into their two modes:
+
+![alt text][histogram2]
+
+
+
+
 
 ## Future Steps
 
@@ -97,3 +130,14 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
    - Junya Nakano
    - ...and the many others who helped to develop the games!
 * Viewers of my GitHub page. Thank you for visiting!
+
+<!-- Image References -->
+
+[boxwhisker]: Plots_for_Readme/boxwhisker1.png "Dataset quartiles"
+[histogram1]: Plots_for_Readme/histogram1.png "Overview of timings distribution"
+[histogram2]: Plots_for_Readme/histogram2.png "Histogram of timings"
+[rugplot1]: Plots_for_Readme/rugplot1.png "Before cleaning"
+[rugplot2]: Plots_for_Readme/rugplot2.png "After cleaning"
+[scatter1a]: Plots_for_Readme/scatter1a.png "First dataset"
+[scatter1b]: Plots_for_Readme/scatter1b.png "Second dataset"
+[scatter2]: Plots_for_Readme/scatter2.png "Timings scatterplot"
